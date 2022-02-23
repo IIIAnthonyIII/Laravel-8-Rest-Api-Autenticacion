@@ -7,15 +7,15 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Rest API con autenticación - Laravel 8
+# Rest API con autenticación - Laravel 8
 
 La API que vamos a crear nos permitirá la creación, consulta, actualización y borrado de Usuarios y Artículos, y que estas acciones solo sean realizadas a través de llamadas autenticadas (de usuarios inicialmente registrados en el sistema):
 
-# Database
+## Database
 - **Articles: `[ tittle, body, timestamps ]`**
 - **User: `[ name, email, password ]`**
 
-# Release
+## Release
 - **Login User: `[POST] http://localhost:8000/api/login`**
 - **Create Article: `[POST] http://localhost:8000/api/articles/`**
 - **Retrieve all Articles: `[GET] http://localhost:8000/api/articles/`**
