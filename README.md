@@ -24,10 +24,10 @@ La API que vamos a crear nos permitirá la creación, consulta, actualización y
 - **Delete an Article: `[DELETE] http://localhost:8000/api/articles/{id}`**
 
 ## Instalación
-1. Clonar repositorio
-2. Abir la consola con cmd
-3. Dirigirse a la ruta de la clonación del repositorio con el comando `cd G:\Ruta del repositorio\Laravel-8-Rest-Api-Autenticacion`
-4. Instalar las dependencias con el comando `npm install` o `composer install`
+- **Clonar repositorio**
+- **Abir la consola con cmd**
+- **Dirigirse a la ruta de la clonación del repositorio con el comando `cd G:\Ruta del repositorio\Laravel-8-Rest-Api-Autenticacion`**
+- **Instalar las dependencias con el comando `npm install` o `composer install`**
 
 ## Base de datos
 - Tener instalado XAMPP 
