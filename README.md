@@ -7,58 +7,38 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Rest API con autenticación - Laravel 8
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+La API que vamos a crear nos permitirá la creación, consulta, actualización y borrado de Usuarios y Artículos, y que estas acciones solo sean realizadas a través de llamadas autenticadas (de usuarios inicialmente registrados en el sistema):
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# Database
+- **Articles: `[ tittle, body, timestamps ]`**
+- **User: `[ name, email, password ]`**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+# Release
+- **Login User: `[POST] http://localhost:8000/api/login`**
+- **Create Article: `[POST] http://localhost:8000/api/articles/`**
+- **Retrieve all Articles: `[GET] http://localhost:8000/api/articles/`**
+- **Retrieve single Article: `[GET] http://localhost:8000/api/articles/{id}`**
+- **Update an Article: `[PUT] http://localhost:8000/api/articles/{id}`**
+- **Delete an Article: `[DELETE] http://localhost:8000/api/articles/{id}`**
 
-## Learning Laravel
+## Instalación
+1. Clonar repositorio
+2. Abir la consola con cmd
+3. Dirigirse a la ruta de la clonación del repositorio con el comando `cd G:\Ruta del repositorio\Laravel-8-Rest-Api-Autenticacion`
+4. Instalar las dependencias con el comando `npm install` o `composer install`
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Base de datos
+- Tener instalado XAMPP 
+- Correr los módulos Apache y MySQL
+- Dar click en `admin` de MySQL o dirigirse a `http://localhost/phpmyadmin/index.php`
+- Crear la base de datos `laravel_8_rest_api_autenticacion`
+- Abrir cmd, dirigirse a la ruta del proyecto y ejecutar `php artisan migrate`
+- Ejecutar `php artisan db:seed --class=ArticlesSeeder`
+- Ejecutar `php artisan db:seed --class=UsersSeeder`
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Correr API
+- En cmd ejecutar `php artisan serve --host=localhost --port=8000`
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Este proyecto se probó en `Postman` revisar carpeta `1.Help`
